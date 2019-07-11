@@ -75,8 +75,6 @@ func (c *Connection) SendMsg(msgId uint32, data []byte) error {
 	return nil
 }
 
-//func NewConnection(conn *net.TCPConn, connID uint32, callback_api ziface.HandFunc) (connection *Connection) {
-//func NewConnection(conn *net.TCPConn, connID uint32, rounter ziface.IRounter) (connection *Connection) {
 func NewConnection(server ziface.IServer, conn *net.TCPConn, connID uint32, msgHandle ziface.IMsgHandle) (connection *Connection) {
 
 	connection = &Connection{
